@@ -54,17 +54,27 @@
 
         <div class="row">
 
-            <div class="header-logo">
+            <!-- <div class="header-logo">
                 <a class="site-logo" href="index.html"><img src="images/logo.svg" alt="Homepage"></a>
-            </div>
+            </div> -->
 
             <nav class="header-nav-wrap">
                 <ul class="header-nav">
-                    <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                    <!-- <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
                     <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
                     <li><a class="smoothscroll"  href="#services" title="services">Services</a></li>
                     <li><a class="smoothscroll"  href="#works" title="works">Works</a></li>
-                    <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
+                    <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li> -->
+
+                    <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                    <li><a class="smoothscroll"  href="#about" title="kits">Kits</a></li>
+                    <li><a class="smoothscroll"  href="#services" title="medicines">Medicines</a></li>
+                    <li><a class="smoothscroll"  href="#works" title="safety equipment">Safety Equipment</a></li>
+                    <li><a class="smoothscroll"  href="#NewArrival" title="New Arrival">New Arrival</a></li>
+                    <li><a class="smoothscroll"  href="#contact" title="how to use">How To Use</a></li>
+                    <li><a class="smoothscroll"  href="#contact" title="smart suggetions">Smart Suggetions</a></li>
+                    <li><a class="smoothscroll"  href="#contact" title="Quick Order">Quick Order</a></li>
+                    <li><a class="smoothscroll"  href="#contact" title="Sign Up">Sign Up</a></li>
                 </ul>
             </nav> <!-- end header-nav-wrap -->
 
@@ -116,7 +126,7 @@
 
         </div> <!-- end home-content -->
 
-        <ul class="home-social">
+        <!-- <ul class="home-social">
             <li>
                 <a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i><span>Facebook</span></a>
             </li>
@@ -132,7 +142,7 @@
             <li>
                 <a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a>
             </li>
-        </ul> <!-- end home-social -->
+        </ul> <!-- end home-social --> -->
 
     </section> <!-- end s-home -->
 
@@ -566,6 +576,305 @@
         </div> <!-- end testimonials-wrap -->
 
     </section> <!-- end s-works -->
+
+    <!-- New Arrival
+    ================================================== -->
+    <section id="NewArrival" class="s-works target-section">
+
+        <div class="row section-header" data-aos="fade-up">
+            <div class="col-full">
+                <h3 data-num="04" class="subhead">New Arrival</h3>
+                <h1 class="display-1">
+                Here are some of our New Arrival product we have
+                stored lately. Feel free to check them out.
+                </h1>
+            </div>
+        </div>
+
+        <div class="portfolio block-1-4 block-m-1-3 block-tab-1-2 collapse">
+
+            <div class="col-block item-folio" data-aos="fade-up">
+
+                <div class="item-folio__thumb">
+                    <a href="images/portfolio/gallery/g-lamp.jpg" class="thumb-link" title="Lamp" data-size="1050x700">
+                        <img src="images/portfolio/lamp.jpg"
+                             srcset="images/portfolio/lamp.jpg 1x, images/portfolio/lamp@2x.jpg 2x" alt="">
+                    </a>
+                </div>
+
+                <div class="item-folio__text">
+                    <h3 class="item-folio__title">
+                        Lamp
+                    </h3>
+                    <p class="item-folio__cat">
+                        Product Catagory will be here
+                    </p>
+                </div>
+
+                <a href="#" class="item-folio__project-link" title="Order">
+                    Code : 1201 <br> Price : 500
+                </a>
+
+                <div class="item-folio__caption">
+                    <p>The usefulness is given here</p>
+                </div>
+
+            </div> <!-- end item-folio -->
+
+            <div class="col-block item-folio" data-aos="fade-up">
+
+                <div class="item-folio__thumb">
+                    <a href="images/portfolio/gallery/g-fuji.jpg" class="thumb-link" title="Fuji" data-size="1050x700">
+                        <img src="images/portfolio/fuji.jpg"
+                             srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="">
+                    </a>
+                </div>
+
+                <div class="item-folio__text">
+                    <h3 class="item-folio__title">
+                        Fuji
+                    </h3>
+                    <p class="item-folio__cat">
+                        Product Catagory will be here
+                    </p>
+                </div>
+
+                <a href="#" class="item-folio__project-link" title="Order">
+                    Code : 1201 <br> Price : 500
+                </a>
+
+                <div class="item-folio__caption">
+                    <p>The usefulness is given here</p>
+                </div>
+
+            </div> <!-- end item-folio -->
+
+            <div class="col-block item-folio" data-aos="fade-up">
+
+                <div class="item-folio__thumb">
+                    <a href="images/portfolio/gallery/g-woodcraft.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
+                        <img src="images/portfolio/woodcraft.jpg"
+                             srcset="images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x" alt="">
+                    </a>
+                </div>
+
+                <div class="item-folio__text">
+                    <h3 class="item-folio__title">
+                        Woodcraft
+                    </h3>
+                    <p class="item-folio__cat">
+                        Product Catagory will be here
+                    </p>
+                </div>
+
+                <a href="#" class="item-folio__project-link" title="Order">
+                    Code : 1201 <br> Price : 500
+                </a>
+
+                <div class="item-folio__caption">
+                    <p>The usefulness is given here</p>
+                </div>
+
+            </div> <!-- end item-folio -->
+
+            <div class="col-block item-folio" data-aos="fade-up">
+
+                <div class="item-folio__thumb">
+                    <a href="images/portfolio/gallery/g-droplet.jpg" class="thumb-link" title="Droplet" data-size="1050x700">
+                        <img src="images/portfolio/droplet.jpg"
+                             srcset="images/portfolio/droplet.jpg 1x, images/portfolio/droplet@2x.jpg 2x" alt="">
+                    </a>
+                </div>
+
+                <div class="item-folio__text">
+                    <h3 class="item-folio__title">
+                        Droplet
+                    </h3>
+                    <p class="item-folio__cat">
+                        Product Catagory will be here
+                    </p>
+                </div>
+
+                <a href="#" class="item-folio__project-link" title="Order">
+                    Code : 1201 <br> Price : 500
+                </a>
+
+                <div class="item-folio__caption">
+                    <p>The usefulness is given here</p>
+                </div>
+
+            </div> <!-- end item-folio -->
+
+            <div class="col-block item-folio" data-aos="fade-up">
+
+                <div class="item-folio__thumb">
+                    <a href="images/portfolio/gallery/g-shutterbug.jpg" class="thumb-link" title="Shutterbug" data-size="1050x700">
+                        <img src="images/portfolio/shutterbug.jpg"
+                             srcset="images/portfolio/shutterbug.jpg 1x, images/portfolio/shutterbug@2x.jpg 2x" alt="">
+                    </a>
+                </div>
+
+                <div class="item-folio__text">
+                    <h3 class="item-folio__title">
+                        Shutterbug
+                    </h3>
+                    <p class="item-folio__cat">
+                        Product Catagory will be here
+                    </p>
+                </div>
+
+                <a href="#" class="item-folio__project-link" title="Order">
+                    Code : 1201 <br> Price : 500
+                </a>
+
+                <div class="item-folio__caption">
+                    <p>The usefulness is given here</p>
+                </div>
+
+            </div> <!-- end item-folio -->
+
+            <div class="col-block item-folio" data-aos="fade-up">
+
+                <div class="item-folio__thumb">
+                    <a href="images/portfolio/gallery/g-minimalismo.jpg" class="thumb-link" title="Minimalismo" data-size="1050x700">
+                        <img src="images/portfolio/minimalismo.jpg"
+                             srcset="images/portfolio/minimalismo.jpg 1x, images/portfolio/minimalismo@2x.jpg 2x" alt="">
+                    </a>
+                </div>
+
+                <div class="item-folio__text">
+                    <h3 class="item-folio__title">
+                        Minimalismo
+                    </h3>
+                    <p class="item-folio__cat">
+                        Product Catagory will be here
+                    </p>
+                </div>
+
+                <a href="#" class="item-folio__project-link" title="Order">
+                    Code : 1201 <br> Price : 500
+                </a>
+
+                <div class="item-folio__caption">
+                    <p>The usefulness is given here</p>
+                </div>
+
+            </div> <!-- end item-folio -->
+
+            <div class="col-block item-folio" data-aos="fade-up">
+
+                <div class="item-folio__thumb">
+                    <a href="images/portfolio/gallery/g-film.jpg" class="thumb-link" title="Film" data-size="1050x700">
+                        <img src="images/portfolio/film.jpg"
+                             srcset="images/portfolio/film.jpg 1x, images/portfolio/film@2x.jpg 2x" alt="">
+                    </a>
+                </div>
+
+                <div class="item-folio__text">
+                    <h3 class="item-folio__title">
+                        Film
+                    </h3>
+                    <p class="item-folio__cat">
+                        Product Catagory will be here
+                    </p>
+                </div>
+
+                <a href="#" class="item-folio__project-link" title="Order">
+                    Code : 1201 <br> Price : 500
+                </a>
+
+                <div class="item-folio__caption">
+                    <p>The usefulness is given here</p>
+                </div>
+
+            </div> <!-- end item-folio -->
+
+            <div class="col-block item-folio" data-aos="fade-up">
+
+                <div class="item-folio__thumb">
+                    <a href="images/portfolio/gallery/g-skaterboy.jpg" class="thumb-link" title="Skaterboy" data-size="1050x700">
+                        <img src="images/portfolio/skaterboy.jpg"
+                             srcset="images/portfolio/skaterboy.jpg 1x, images/portfolio/skaterboy@2x.jpg 2x" alt="">
+                    </a>
+                </div>
+
+                <div class="item-folio__text">
+                    <h3 class="item-folio__title">
+                        Skaterboy
+                    </h3>
+                    <p class="item-folio__cat">
+                        Product Catagory will be here
+                    </p>
+                </div>
+
+                <a href="#" class="item-folio__project-link" title="Order">
+                    Code : 1201 <br> Price : 500
+                </a>
+
+                <div class="item-folio__caption">
+                    <p>The usefulness is given here</p>
+                </div>
+
+            </div> <!-- end item-folio -->
+
+        </div> <!-- end portfolio -->
+
+
+        <div class="testimonials-wrap" data-aos="fade-up">
+
+            <div class="row">
+                <div class="col-full testimonials-header">
+                    <h2 class="h1">What Clients Are Saying...</h2>
+                </div>
+            </div>
+
+            <div class="row testimonials">
+
+                <div class="col-full testimonials__slider">
+
+                    <div class="testimonials__slide">
+                        <span class="testimonials__icon"></span>
+                        <p>Product Review will be added here</p>
+                        <div class="testimonials__author">
+                            <span class="testimonials__name">Reviewer1</span>
+                            <span class="testimonials__position">Occupation1</span>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+
+                    <div class="testimonials__slide">
+                        <span class="testimonials__icon"></span>
+                        <p>Product Review will be added here</p>
+                        <div class="testimonials__author">
+                            <span class="testimonials__name">Reviewer1</span>
+                            <span class="testimonials__position">Occupation1</span>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+
+                    <div class="testimonials__slide">
+                        <span class="testimonials__icon"></span>
+                        <p>Product Review will be added here</p>
+                        <div class="testimonials__author">
+                            <span class="testimonials__name">Reviewer1</span>
+                            <span class="testimonials__position">Occupation1</span>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+
+                    <div class="testimonials__slide">
+                        <span class="testimonials__icon"></span>
+                        <p>Product Review will be added here</p>
+                        <div class="testimonials__author">
+                            <span class="testimonials__name">Reviewer1</span>
+                            <span class="testimonials__position">Occupation1</span>
+                        </div>
+                    </div> <!-- end testimonials__slide -->
+
+                </div> <!-- end testimonials__slider -->
+
+            </div> <!-- end testimonials -->
+
+        </div> <!-- end testimonials-wrap -->
+
+    </section> <!-- end New Arrival -->
 
 
     <!-- clients
