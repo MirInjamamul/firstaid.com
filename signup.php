@@ -1,3 +1,29 @@
+<?php
+session_start();
+
+// initializing variables
+$username = "";
+$password = "";
+
+// connect to the database
+$db = mysqli_connect('localhost', 'root', '', 'firstaid');
+
+// REGISTER USER
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  // receive all input values from the form
+  $username = mysqli_real_escape_string($db, $_POST['username']);
+  $password = mysqli_real_escape_string($db, $_POST['password']);
+
+  // Finally, register user if there are no errors in the form
+
+  	$query = "INSERT INTO login (username, password)
+  			  VALUES('$username', '$password')";
+  	mysqli_query($db, $query);
+  	$_SESSION['username'] = $username;
+  	//$_SESSION['success'] = "You are now logged in";
+  	//header('location: login.php');
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,20 +45,19 @@
 		<div class="main-agileinfo">
 			<div class="agileits-top">
 				<form action="#" method="post">
-					<input class="text" type="text" name="Username" placeholder="Username" required="">
-					<input class="text email" type="email" name="email" placeholder="Email" required="">
+					<input class="text" type="text" name="username" placeholder="Username" required="">
 					<input class="text" type="password" name="password" placeholder="Password" required="">
 					<input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
-					<div class="wthree-text">
+					<!-- <div class="wthree-text">
 						<label class="anim">
 							<input type="checkbox" class="checkbox" required="">
 							<span>I Agree To The Terms & Conditions</span>
 						</label>
 						<div class="clear"> </div>
-					</div>
+					</div> -->
 					<input type="submit" value="SIGNUP">
 				</form>
-				<p>Don't have an Account? <a href="login.html"> Login Now!</a></p>
+				<p>Don't have an Account? <a href="login.php"> Login Now!</a></p>
 			</div>
 		</div>
 		<!-- copyright -->
