@@ -24,7 +24,8 @@ session_start();
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6 text-right">
                     <p>
-                        <em>Date: **-**-****</em>
+                        <em>Date: <?php echo "" . date("Y/m/d") . "<br>";
+                                  ?></em>
                     </p>
                     <p>
                         <em>Receipt #: #Rand_id</em>
