@@ -12,13 +12,19 @@
       $product_id = mysqli_real_escape_string($db,$_POST['product_id']);
       $quantity = mysqli_real_escape_string($db,$_POST['quantity']);
 
-      $sql = "SELECT price FROM product_list WHERE product_id = '$product_id'";
+      $sql = "SELECT * FROM product_list WHERE product_id = '$product_id'";
       $result = mysqli_query($db,$sql);
       $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
 
       $price = $row['price'];
 
       $total_price = $price * $quantity ;
+
+      $_SESSION['product_name'] = $row['product_name'];
+      $_SESSION['price'] = $row['price'];
+      $_SESSION['total_price'] = $total_price;
+      $_SESSION['quantity'] = $quantity;
+       header("location: receipt.php");
 
       // If result matched $myusername and $mypassword, table row must be 1 row
    }
