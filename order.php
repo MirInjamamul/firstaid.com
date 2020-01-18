@@ -24,9 +24,15 @@
       $_SESSION['price'] = $row['price'];
       $_SESSION['total_price'] = $total_price;
       $_SESSION['quantity'] = $quantity;
+      $username = $_SESSION['username'];
+      $flag = 0;
+      $bkash = "null";
+      $query1 = "INSERT INTO product_order (product_id,user_name,total,bkash,flag)
+    			  VALUES('$product_id','$username','$total_price','$bkash','$flag')";
+    	mysqli_query($db, $query1);
        header("location: receipt.php");
 
-      // If result matched $myusername and $mypassword, table row must be 1 row
+
    }
 ?>
 <!DOCTYPE html>
@@ -54,9 +60,6 @@
         </table>
 
       </form>
-
-      <h4>Total Price</h4>
-      <p id="total price"> <?php echo $total_price; ?> </p>
 
   </body>
 </html>
