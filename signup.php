@@ -13,11 +13,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // receive all input values from the form
   $username = mysqli_real_escape_string($db, $_POST['username']);
   $password = mysqli_real_escape_string($db, $_POST['password']);
+  $email = mysqli_real_escape_string($db, $_POST['email']);
+  $phone_no = mysqli_real_escape_string($db, $_POST['phone_no']);
 
   // Finally, register user if there are no errors in the form
 
-  	$query = "INSERT INTO login (username, password)
-  			  VALUES('$username', '$password')";
+  	$query = "INSERT INTO login (username, password, email, phone_no)
+  			  VALUES('$username', '$password', '$email', '$phone_no')";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	//$_SESSION['success'] = "You are now logged in";
@@ -46,7 +48,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			<div class="agileits-top">
 				<form action="#" method="post">
 					<input class="text" type="text" name="username" placeholder="Username" required="">
-					<input class="text" type="password" name="password" placeholder="Password" required="">
+					<input class="text" type="text" name="email" placeholder="email" required="">
+          <input class="text" type="text" name="phone_no" placeholder="phone_no" required="">
+          <input class="text" type="password" name="password" placeholder="Password" required="">
 					<input class="text w3lpass" type="password" name="password" placeholder="Confirm Password" required="">
 					<!-- <div class="wthree-text">
 						<label class="anim">

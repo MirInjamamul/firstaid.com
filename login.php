@@ -25,7 +25,7 @@
 
       if($count == 1) {
         $_SESSION['username'] = $myusername;
-         header("location: order.php");
+         header("location: medicine.html");
       }else {
          $error = "Your Login Name or Password is invalid";
       }
