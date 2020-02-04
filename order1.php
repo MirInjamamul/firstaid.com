@@ -3,7 +3,7 @@
  session_start();
    // connect to the database
    $db = mysqli_connect('localhost', 'root', '', 'firstaid');
-   $getProductId = 0;
+
    $total_price = 0;
 
    if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -48,7 +48,7 @@
         <table border="0">
           <tr>
             <td>Product Id : </td>
-            <td><input type="text" name="product_id" placeholder="Product Id"></td>
+            <td><?php $getProductId = $_GET['id']; echo $getProductId; ?></td>
           </tr>
           <tr>
             <td>Product Quantity :</td>
