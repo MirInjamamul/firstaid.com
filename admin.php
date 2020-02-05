@@ -11,6 +11,18 @@ $query1 = "SELECT * FROM product_order Where flag = 1";
 $result2 = mysqli_query($db,$query1);
 $rows2 = mysqli_num_rows($result2);
 
+if(isset($_POST['product_entry'])){
+
+  $id = mysqli_real_escape_string($db,$_POST['id']);
+  $name = mysqli_real_escape_string($db,$_POST['name']);
+  $price = mysqli_real_escape_string($db,$_POST['price']);
+
+  $query1 = "INSERT INTO product_list (product_id,product_name,price)
+        VALUES('$id','$name','$price')";
+  mysqli_query($db, $query1);
+   header("location: admin.php");
+}
+
 /*
 //Notice List
 $queryNotice = "SELECT * FROM notice";
@@ -27,7 +39,7 @@ if(isset($_POST['upcomingExamFormImport'])){
 }
 
 // notice Update
-if(isset($_POST['noticeFormImport'])){
+if(isset($_POST['product_entry'])){
 
     $notice = $_POST['notice'];
 
@@ -41,7 +53,7 @@ if(isset($_POST['noticeFormImport'])){
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>FirstAid - Medicine</title>
+    <title>FirstAid - Admin Panel</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -154,9 +166,7 @@ if(isset($_POST['noticeFormImport'])){
             <div class="row home-content__main">
 
                 <h1>
-                We provide creative <br>
-                solutions to turn your <br>
-                ideas into digital reality
+                ADMIN PANEL
                 </h1>
 
                 <div class="home-content__button">
@@ -262,43 +272,6 @@ if(isset($_POST['noticeFormImport'])){
             </div>
         </div>
 
-        <div class="row about-process block-1-2 block-tab-full">
-
-            <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__header item-process__header--planning">
-                    <h3>Planning</h3>
-                </div>
-                <p>
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta.
-                </p>
-            </div>
-            <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__header item-process__header--branding">
-                    <h3>Branding</h3>
-                </div>
-                <p>
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta.
-                </p>
-            </div>
-            <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__header item-process__header--implementation">
-                    <h3>Implementation</h3>
-                </div>
-                <p>
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta.
-                </p>
-            </div>
-            <div class="col-block item-process" data-aos="fade-up">
-                <div class="item-process__header item-process__header--documentation">
-                    <h3>Documentation</h3>
-                </div>
-                <p>
-                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Nulla porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta.
-                </p>
-            </div>
-
-        </div>  <!-- end about-process -->
-
     </section> <!-- end s-about -->
 
 
@@ -365,64 +338,6 @@ if(isset($_POST['noticeFormImport'])){
           </div>
       </div>
 
-        <div class="row services-list block-1-3 block-m-1-2 block-tab-full">
-
-            <div class="col-block item-service" data-aos="fade-up">
-                <h4>Brand Identity</h4>
-                <p>
-                Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et
-                a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus
-                asperiores est commodi amet quia architecto. Dolores necessitatibus et.
-                </p>
-            </div>
-
-            <div class="col-block item-service" data-aos="fade-up">
-                <h4>Illustration</h4>
-                <p>
-                Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et
-                a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus
-                asperiores est commodi amet quia architecto. Dolores necessitatibus et.
-                </p>
-            </div>
-
-            <div class="col-block item-service" data-aos="fade-up">
-                <h4>Web Design</h4>
-                <p>
-                Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et
-                a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus
-                asperiores est commodi amet quia architecto. Dolores necessitatibus et.
-                </p>
-            </div>
-
-            <div class="col-block item-service" data-aos="fade-up">
-                <h4>Product Strategy</h4>
-                <p>
-                Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et
-                a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus
-                asperiores est commodi amet quia architecto. Dolores necessitatibus et.
-                </p>
-            </div>
-
-            <div class="col-block item-service" data-aos="fade-up">
-                <h4>UI/UX Design</h4>
-                <p>
-                Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et
-                a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus
-                asperiores est commodi amet quia architecto. Dolores necessitatibus et.
-                </p>
-            </div>
-
-            <div class="col-block item-service" data-aos="fade-up">
-                <h4>Mobile Design</h4>
-                <p>
-                Sit ut cum molestiae. Dolore ducimus qui quasi. Fugiat consequatur sit vel illum vel et
-                a delectus. Vel sequi vitae voluptatem perspiciatis eligendi. Voluptatibus optio natus
-                asperiores est commodi amet quia architecto. Dolores necessitatibus et.
-                </p>
-            </div>
-
-        </div> <!-- end services-list -->
-
     </section> <!-- end s-services -->
 
 
@@ -432,592 +347,36 @@ if(isset($_POST['noticeFormImport'])){
 
         <div class="row section-header" data-aos="fade-up">
             <div class="col-full">
-                <h3 data-num="03" class="subhead">Recent Works</h3>
-                <h1 class="display-1">
-                Here are some of our favorite projects we have
-                done lately. Feel free to check them out.
-                </h1>
+                <h3 data-num="03" class="subhead">Product Entry</h3>
+                <h1 align="center">Product Entry</h1>
+
+                <form action="" method="post">
+                  <table border="0">
+                    <tr>
+                      <td>Product Id : </td>
+                      <td><input type="number" name="id" placeholder="Product Id"></td>
+                    </tr>
+                    <tr>
+                      <td>Product Name :</td>
+                      <td><input type="text" name="name" placeholder="Product Name"></td>
+                    </tr>
+                    <tr>
+                      <td>Price :</td>
+                      <td><input type="number" name="price" placeholder="price"></td>
+                    </tr>
+                    <tr>
+                      <td colspan="2"><input type="submit" name="product_entry" value="Order"></td>
+                    </tr>
+                  </table>
+
+                </form>
             </div>
         </div>
-
-        <div class="portfolio block-1-4 block-m-1-3 block-tab-1-2 collapse">
-
-            <div class="col-block item-folio" data-aos="fade-up">
-
-                <div class="item-folio__thumb">
-                    <a href="images/portfolio/gallery/g-lamp.jpg" class="thumb-link" title="Lamp" data-size="1050x700">
-                        <img src="images/portfolio/lamp.jpg"
-                             srcset="images/portfolio/lamp.jpg 1x, images/portfolio/lamp@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-
-                <div class="item-folio__text">
-                    <h3 class="item-folio__title">
-                        Lamp
-                    </h3>
-                    <p class="item-folio__cat">
-                        Web Design
-                    </p>
-                </div>
-
-                <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                    Project Link
-                </a>
-
-                <div class="item-folio__caption">
-                    <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                </div>
-
-            </div> <!-- end item-folio -->
-
-            <div class="col-block item-folio" data-aos="fade-up">
-
-                <div class="item-folio__thumb">
-                    <a href="images/portfolio/gallery/g-fuji.jpg" class="thumb-link" title="Fuji" data-size="1050x700">
-                        <img src="images/portfolio/fuji.jpg"
-                             srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-
-                <div class="item-folio__text">
-                    <h3 class="item-folio__title">
-                        Fuji
-                    </h3>
-                    <p class="item-folio__cat">
-                        Branding
-                    </p>
-                </div>
-
-                <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                    Project Link
-                </a>
-
-                <div class="item-folio__caption">
-                    <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                </div>
-
-            </div> <!-- end item-folio -->
-
-            <div class="col-block item-folio" data-aos="fade-up">
-
-                <div class="item-folio__thumb">
-                    <a href="images/portfolio/gallery/g-woodcraft.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
-                        <img src="images/portfolio/woodcraft.jpg"
-                             srcset="images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-
-                <div class="item-folio__text">
-                    <h3 class="item-folio__title">
-                        Woodcraft
-                    </h3>
-                    <p class="item-folio__cat">
-                        Web Design
-                    </p>
-                </div>
-
-                <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                    Project Link
-                </a>
-
-                <div class="item-folio__caption">
-                    <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                </div>
-
-            </div> <!-- end item-folio -->
-
-            <div class="col-block item-folio" data-aos="fade-up">
-
-                <div class="item-folio__thumb">
-                    <a href="images/portfolio/gallery/g-droplet.jpg" class="thumb-link" title="Droplet" data-size="1050x700">
-                        <img src="images/portfolio/droplet.jpg"
-                             srcset="images/portfolio/droplet.jpg 1x, images/portfolio/droplet@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-
-                <div class="item-folio__text">
-                    <h3 class="item-folio__title">
-                        Droplet
-                    </h3>
-                    <p class="item-folio__cat">
-                        Web Development
-                    </p>
-                </div>
-
-                <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                    Project Link
-                </a>
-
-                <div class="item-folio__caption">
-                    <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                </div>
-
-            </div> <!-- end item-folio -->
-
-            <div class="col-block item-folio" data-aos="fade-up">
-
-                <div class="item-folio__thumb">
-                    <a href="images/portfolio/gallery/g-shutterbug.jpg" class="thumb-link" title="Shutterbug" data-size="1050x700">
-                        <img src="images/portfolio/shutterbug.jpg"
-                             srcset="images/portfolio/shutterbug.jpg 1x, images/portfolio/shutterbug@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-
-                <div class="item-folio__text">
-                    <h3 class="item-folio__title">
-                        Shutterbug
-                    </h3>
-                    <p class="item-folio__cat">
-                        Web Design
-                    </p>
-                </div>
-
-                <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                    Project Link
-                </a>
-
-                <div class="item-folio__caption">
-                    <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                </div>
-
-            </div> <!-- end item-folio -->
-
-            <div class="col-block item-folio" data-aos="fade-up">
-
-                <div class="item-folio__thumb">
-                    <a href="images/portfolio/gallery/g-minimalismo.jpg" class="thumb-link" title="Minimalismo" data-size="1050x700">
-                        <img src="images/portfolio/minimalismo.jpg"
-                             srcset="images/portfolio/minimalismo.jpg 1x, images/portfolio/minimalismo@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-
-                <div class="item-folio__text">
-                    <h3 class="item-folio__title">
-                        Minimalismo
-                    </h3>
-                    <p class="item-folio__cat">
-                        UX Design
-                    </p>
-                </div>
-
-                <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                    Project Link
-                </a>
-
-                <div class="item-folio__caption">
-                    <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                </div>
-
-            </div> <!-- end item-folio -->
-
-            <div class="col-block item-folio" data-aos="fade-up">
-
-                <div class="item-folio__thumb">
-                    <a href="images/portfolio/gallery/g-film.jpg" class="thumb-link" title="Film" data-size="1050x700">
-                        <img src="images/portfolio/film.jpg"
-                             srcset="images/portfolio/film.jpg 1x, images/portfolio/film@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-
-                <div class="item-folio__text">
-                    <h3 class="item-folio__title">
-                        Film
-                    </h3>
-                    <p class="item-folio__cat">
-                        Branding
-                    </p>
-                </div>
-
-                <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                    Project Link
-                </a>
-
-                <div class="item-folio__caption">
-                    <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                </div>
-
-            </div> <!-- end item-folio -->
-
-            <div class="col-block item-folio" data-aos="fade-up">
-
-                <div class="item-folio__thumb">
-                    <a href="images/portfolio/gallery/g-skaterboy.jpg" class="thumb-link" title="Skaterboy" data-size="1050x700">
-                        <img src="images/portfolio/skaterboy.jpg"
-                             srcset="images/portfolio/skaterboy.jpg 1x, images/portfolio/skaterboy@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-
-                <div class="item-folio__text">
-                    <h3 class="item-folio__title">
-                        Skaterboy
-                    </h3>
-                    <p class="item-folio__cat">
-                        Web Design
-                    </p>
-                </div>
-
-                <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                    Project Link
-                </a>
-
-                <div class="item-folio__caption">
-                    <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
-                </div>
-
-            </div> <!-- end item-folio -->
-
-        </div> <!-- end portfolio -->
-
-
-        <div class="testimonials-wrap" data-aos="fade-up">
-
-            <div class="row">
-                <div class="col-full testimonials-header">
-                    <h2 class="h1">What Clients Are Saying...</h2>
-                </div>
-            </div>
-
-            <div class="row testimonials">
-
-                <div class="col-full testimonials__slider">
-
-                    <div class="testimonials__slide">
-                        <span class="testimonials__icon"></span>
-                        <p>Qui ipsam temporibus quisquam velMaiores eos cumque distinctio nam accusantium ipsum.
-                        Laudantium quia consequatur molestias delectus culpa facere hic dolores aperiam. Accusantium praesentium corpori.</p>
-                        <div class="testimonials__author">
-                            <img src="images/avatars/user-01.jpg" alt="Author image" class="testimonials__avatar">
-                            <span class="testimonials__name">Tim Cook</span>
-                            <span class="testimonials__position">CEO, Apple</span>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
-
-                    <div class="testimonials__slide">
-                        <span class="testimonials__icon"></span>
-                        <p>Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
-                        Nisi eaque consequatur. Quasi voluptas eius distinctio. Atque eos maxime. Qui ipsam temporibus quisquam vel.</p>
-                        <div class="testimonials__author">
-                            <img src="images/avatars/user-05.jpg" alt="Author image" class="testimonials__avatar">
-                            <span class="testimonials__name">Sundar Pichai</span>
-                            <span class="testimonials__position">CEO, Google</span>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
-
-                    <div class="testimonials__slide">
-                        <span class="testimonials__icon"></span>
-                        <p>Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.
-                        Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.</p>
-                        <div class="testimonials__author">
-                            <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonials__avatar">
-                            <span class="testimonials__name">Satya Nadella</span>
-                            <span class="testimonials__position">CEO, Microsoft</span>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
-
-                </div> <!-- end testimonials__slider -->
-
-            </div> <!-- end testimonials -->
-
-        </div> <!-- end testimonials-wrap -->
-
     </section> <!-- end s-works -->
 
     <!-- New Arrival
     ================================================== -->
     <section id="NewArrival" class="s-works target-section">
-
-        <div class="row section-header" data-aos="fade-up">
-            <div class="col-full">
-                <h3 data-num="04" class="subhead">New Arrival</h3>
-                <h1 class="display-1">
-                Here are some of our New Arrival product we have
-                stored lately. Feel free to check them out.
-                </h1>
-            </div>
-        </div>
-
-        <div class="portfolio block-1-4 block-m-1-3 block-tab-1-2 collapse">
-
-            <div class="col-block item-folio" data-aos="fade-up">
-
-                <div class="item-folio__thumb">
-                    <a href="images/portfolio/gallery/g-lamp.jpg" class="thumb-link" title="Lamp" data-size="1050x700">
-                        <img src="images/portfolio/lamp.jpg"
-                             srcset="images/portfolio/lamp.jpg 1x, images/portfolio/lamp@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-
-                <div class="item-folio__text">
-                    <h3 class="item-folio__title">
-                        Lamp
-                    </h3>
-                    <p class="item-folio__cat">
-                        Product Catagory will be here
-                    </p>
-                </div>
-
-                <a href="#" class="item-folio__project-link" title="Order">
-                    Code : 1201 <br> Price : 500
-                </a>
-
-                <div class="item-folio__caption">
-                    <p>The usefulness is given here</p>
-                </div>
-
-            </div> <!-- end item-folio -->
-
-            <div class="col-block item-folio" data-aos="fade-up">
-
-                <div class="item-folio__thumb">
-                    <a href="images/portfolio/gallery/g-fuji.jpg" class="thumb-link" title="Fuji" data-size="1050x700">
-                        <img src="images/portfolio/fuji.jpg"
-                             srcset="images/portfolio/fuji.jpg 1x, images/portfolio/fuji@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-
-                <div class="item-folio__text">
-                    <h3 class="item-folio__title">
-                        Fuji
-                    </h3>
-                    <p class="item-folio__cat">
-                        Product Catagory will be here
-                    </p>
-                </div>
-
-                <a href="#" class="item-folio__project-link" title="Order">
-                    Code : 1201 <br> Price : 500
-                </a>
-
-                <div class="item-folio__caption">
-                    <p>The usefulness is given here</p>
-                </div>
-
-            </div> <!-- end item-folio -->
-
-            <div class="col-block item-folio" data-aos="fade-up">
-
-                <div class="item-folio__thumb">
-                    <a href="images/portfolio/gallery/g-woodcraft.jpg" class="thumb-link" title="Woodcraft" data-size="1050x700">
-                        <img src="images/portfolio/woodcraft.jpg"
-                             srcset="images/portfolio/woodcraft.jpg 1x, images/portfolio/woodcraft@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-
-                <div class="item-folio__text">
-                    <h3 class="item-folio__title">
-                        Woodcraft
-                    </h3>
-                    <p class="item-folio__cat">
-                        Product Catagory will be here
-                    </p>
-                </div>
-
-                <a href="#" class="item-folio__project-link" title="Order">
-                    Code : 1201 <br> Price : 500
-                </a>
-
-                <div class="item-folio__caption">
-                    <p>The usefulness is given here</p>
-                </div>
-
-            </div> <!-- end item-folio -->
-
-            <div class="col-block item-folio" data-aos="fade-up">
-
-                <div class="item-folio__thumb">
-                    <a href="images/portfolio/gallery/g-droplet.jpg" class="thumb-link" title="Droplet" data-size="1050x700">
-                        <img src="images/portfolio/droplet.jpg"
-                             srcset="images/portfolio/droplet.jpg 1x, images/portfolio/droplet@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-
-                <div class="item-folio__text">
-                    <h3 class="item-folio__title">
-                        Droplet
-                    </h3>
-                    <p class="item-folio__cat">
-                        Product Catagory will be here
-                    </p>
-                </div>
-
-                <a href="#" class="item-folio__project-link" title="Order">
-                    Code : 1201 <br> Price : 500
-                </a>
-
-                <div class="item-folio__caption">
-                    <p>The usefulness is given here</p>
-                </div>
-
-            </div> <!-- end item-folio -->
-
-            <div class="col-block item-folio" data-aos="fade-up">
-
-                <div class="item-folio__thumb">
-                    <a href="images/portfolio/gallery/g-shutterbug.jpg" class="thumb-link" title="Shutterbug" data-size="1050x700">
-                        <img src="images/portfolio/shutterbug.jpg"
-                             srcset="images/portfolio/shutterbug.jpg 1x, images/portfolio/shutterbug@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-
-                <div class="item-folio__text">
-                    <h3 class="item-folio__title">
-                        Shutterbug
-                    </h3>
-                    <p class="item-folio__cat">
-                        Product Catagory will be here
-                    </p>
-                </div>
-
-                <a href="#" class="item-folio__project-link" title="Order">
-                    Code : 1201 <br> Price : 500
-                </a>
-
-                <div class="item-folio__caption">
-                    <p>The usefulness is given here</p>
-                </div>
-
-            </div> <!-- end item-folio -->
-
-            <div class="col-block item-folio" data-aos="fade-up">
-
-                <div class="item-folio__thumb">
-                    <a href="images/portfolio/gallery/g-minimalismo.jpg" class="thumb-link" title="Minimalismo" data-size="1050x700">
-                        <img src="images/portfolio/minimalismo.jpg"
-                             srcset="images/portfolio/minimalismo.jpg 1x, images/portfolio/minimalismo@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-
-                <div class="item-folio__text">
-                    <h3 class="item-folio__title">
-                        Minimalismo
-                    </h3>
-                    <p class="item-folio__cat">
-                        Product Catagory will be here
-                    </p>
-                </div>
-
-                <a href="#" class="item-folio__project-link" title="Order">
-                    Code : 1201 <br> Price : 500
-                </a>
-
-                <div class="item-folio__caption">
-                    <p>The usefulness is given here</p>
-                </div>
-
-            </div> <!-- end item-folio -->
-
-            <div class="col-block item-folio" data-aos="fade-up">
-
-                <div class="item-folio__thumb">
-                    <a href="images/portfolio/gallery/g-film.jpg" class="thumb-link" title="Film" data-size="1050x700">
-                        <img src="images/portfolio/film.jpg"
-                             srcset="images/portfolio/film.jpg 1x, images/portfolio/film@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-
-                <div class="item-folio__text">
-                    <h3 class="item-folio__title">
-                        Film
-                    </h3>
-                    <p class="item-folio__cat">
-                        Product Catagory will be here
-                    </p>
-                </div>
-
-                <a href="#" class="item-folio__project-link" title="Order">
-                    Code : 1201 <br> Price : 500
-                </a>
-
-                <div class="item-folio__caption">
-                    <p>The usefulness is given here</p>
-                </div>
-
-            </div> <!-- end item-folio -->
-
-            <div class="col-block item-folio" data-aos="fade-up">
-
-                <div class="item-folio__thumb">
-                    <a href="images/portfolio/gallery/g-skaterboy.jpg" class="thumb-link" title="Skaterboy" data-size="1050x700">
-                        <img src="images/portfolio/skaterboy.jpg"
-                             srcset="images/portfolio/skaterboy.jpg 1x, images/portfolio/skaterboy@2x.jpg 2x" alt="">
-                    </a>
-                </div>
-
-                <div class="item-folio__text">
-                    <h3 class="item-folio__title">
-                        Skaterboy
-                    </h3>
-                    <p class="item-folio__cat">
-                        Product Catagory will be here
-                    </p>
-                </div>
-
-                <a href="#" class="item-folio__project-link" title="Order">
-                    Code : 1201 <br> Price : 500
-                </a>
-
-                <div class="item-folio__caption">
-                    <p>The usefulness is given here</p>
-                </div>
-
-            </div> <!-- end item-folio -->
-
-        </div> <!-- end portfolio -->
-
-
-        <div class="testimonials-wrap" data-aos="fade-up">
-
-            <div class="row">
-                <div class="col-full testimonials-header">
-                    <h2 class="h1">What Clients Are Saying...</h2>
-                </div>
-            </div>
-
-            <div class="row testimonials">
-
-                <div class="col-full testimonials__slider">
-
-                    <div class="testimonials__slide">
-                        <span class="testimonials__icon"></span>
-                        <p>Product Review will be added here</p>
-                        <div class="testimonials__author">
-                            <span class="testimonials__name">Reviewer1</span>
-                            <span class="testimonials__position">Occupation1</span>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
-
-                    <div class="testimonials__slide">
-                        <span class="testimonials__icon"></span>
-                        <p>Product Review will be added here</p>
-                        <div class="testimonials__author">
-                            <span class="testimonials__name">Reviewer1</span>
-                            <span class="testimonials__position">Occupation1</span>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
-
-                    <div class="testimonials__slide">
-                        <span class="testimonials__icon"></span>
-                        <p>Product Review will be added here</p>
-                        <div class="testimonials__author">
-                            <span class="testimonials__name">Reviewer1</span>
-                            <span class="testimonials__position">Occupation1</span>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
-
-                    <div class="testimonials__slide">
-                        <span class="testimonials__icon"></span>
-                        <p>Product Review will be added here</p>
-                        <div class="testimonials__author">
-                            <span class="testimonials__name">Reviewer1</span>
-                            <span class="testimonials__position">Occupation1</span>
-                        </div>
-                    </div> <!-- end testimonials__slide -->
-
-                </div> <!-- end testimonials__slider -->
-
-            </div> <!-- end testimonials -->
-
-        </div> <!-- end testimonials-wrap -->
 
     </section> <!-- end New Arrival -->
 
@@ -1026,57 +385,8 @@ if(isset($_POST['noticeFormImport'])){
     ================================================== -->
     <section id="clients" class="s-clients target-section">
 
-        <div class="row section-header" data-aos="fade-up">
-            <div class="col-full">
-                <h3 data-num="04" class="subhead">Selected Clients</h3>
-                <h1 class="display-1 display-1--light">Here are some of the brands we have had the priviledge to work with.</h1>
-            </div>
-        </div>
 
-        <div class="row clients-list block-1-4 block-tab-1-3 block-mob-1-2" data-aos="fade-up">
 
-            <div class="col-block item-client">
-                <a href="#0">
-                    <img src="images/clients/icon-atom.svg" alt="">
-                </a>
-            </div>
-            <div class="col-block item-client">
-                <a href="#0">
-                    <img src="images/clients/icon-dropbox.svg" alt="">
-                </a>
-            </div>
-            <div class="col-block item-client">
-                <a href="#0">
-                    <img src="images/clients/icon-firefox.svg" alt="">
-                </a>
-            </div>
-            <div class="col-block item-client">
-                <a href="#0">
-                    <img src="images/clients/icon-github.svg" alt="">
-                </a>
-            </div>
-            <div class="col-block item-client">
-                <a href="#0">
-                    <img src="images/clients/icon-mozilla.svg" alt="">
-                </a>
-            </div>
-            <div class="col-block item-client">
-                <a href="#0">
-                    <img src="images/clients/icon-linux.svg" alt="">
-                </a>
-            </div>
-            <div class="col-block item-client">
-                <a href="#0">
-                    <img src="images/clients/icon-ubuntu.svg" alt="">
-                </a>
-            </div>
-            <div class="col-block item-client">
-                <a href="#0">
-                    <img src="images/clients/icon-sass.svg" alt="">
-                </a>
-            </div>
-
-        </div> <!-- clients-list -->
 
     </section> <!-- end s-clients -->
 
@@ -1085,26 +395,7 @@ if(isset($_POST['noticeFormImport'])){
     ================================================== -->
     <section id="stats" class="s-stats">
 
-        <div class="row stats-block block-1-4 block-m-1-2 block-mob-full" data-aos="fade-up">
 
-            <div class="col-block item-stats ">
-                <div class="item-stats__count">213</div>
-                <h5>Projects Completed</h5>
-            </div>
-            <div class="col-block item-stats">
-                <div class="item-stats__count">179</div>
-                <h5>Happy Clients</h5>
-            </div>
-            <div class="col-block item-stats">
-                <div class="item-stats__count">35</div>
-                <h5>Awards Received</h5>
-            </div>
-            <div class="col-block item-stats">
-                <div class="item-stats__count">2319</div>
-                <h5>Cups of Coffee</h5>
-            </div>
-
-        </div> <!-- end stats -->
 
     </section> <!-- end s-stats -->
 
