@@ -82,6 +82,23 @@ session_start();
 								</div>
 							</fieldset>
 						</form>
+            <form action="" method="" id="create-account_form">
+							<fieldset>
+								<h3>Cash On Delivery</h3>
+								<div class="form_content clearfix">
+									<h4>Enter your contact Number</h4>
+									<p class="text">
+										<label for="email_create">USERNAME</label>
+										<span>
+											<input placeholder="Contact Number"  type="text" id="email_create" name="bkash" value="" class="account_input">
+					                    </span>
+									</p>
+									<p class="submit">
+										<button class="btn btn-primary">Enter Your Number</button>
+									</p>
+								</div>
+							</fieldset>
+						</form>
 			      	</div>
 			      	<div class="modal-footer">
 			        	<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
