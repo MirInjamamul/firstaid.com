@@ -131,6 +131,7 @@ if(isset($_POST['product_entry'])){
     <header class="s-header">
       <div class="stellarnav">
       <ul>
+        <li><a class="site-logo" href="#"><img src="images/first_aid_logo.jpg" alt="Homepage"></a></li>
         <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
         <li><a class="smoothscroll"  href="#about" title="kits">Kits</a>
           <ul>
