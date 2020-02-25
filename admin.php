@@ -11,6 +11,10 @@ $query1 = "SELECT * FROM product_order Where flag = 1";
 $result2 = mysqli_query($db,$query1);
 $rows2 = mysqli_num_rows($result2);
 
+$query2 = "SELECT * FROM product_order Where flag = 2";
+$result3 = mysqli_query($db,$query2);
+$rows3 = mysqli_num_rows($result3);
+
 if(isset($_POST['product_entry'])){
 
   $id = mysqli_real_escape_string($db,$_POST['id']);
@@ -305,6 +309,65 @@ if(isset($_POST['product_entry'])){
                         <?php
                         $count= 0;
                         while ($rowTS = mysqli_fetch_array($result2)) {
+                            $count++;
+                            ?>
+                            <tr>
+                                <td><center><?php $summary = $rowTS['user_name']; echo $summary;?></center></td>
+                                <td><center><?php $summary = $rowTS['product_id']; echo $summary;?></center></td>
+                                <td><center><?php $summary = $rowTS['total']; echo $summary;?></center></td>
+                                <td><center><?php $summary = $rowTS['bkash']; echo $summary;?></center></td>
+                                <td ><a href="orderPaid.php?edit_id=<?php echo $rowTS['id']; ?>">Paid</a></td>
+                            </tr>
+                        <?php
+                        }
+                        }
+                        else
+                        {
+                        ?>
+                        <table class="table table-bordered">
+                            <thead>
+                            <tr>
+                              <th><center>User Name</center></th>
+                              <th><center>Product Id</center></th>
+                              <th><center>Total Price</center></th>
+                            </tr>
+                            </thead>
+                            <tr>
+                                <td colspan="7" style="color: red"><center><?php echo "No result to show"; ?></center></td>
+                            </tr>
+                            <?php }
+                            ?>
+                        </table>
+                </div>
+              </p>
+          </div>
+      </div>
+
+      <div class="row section-header" data-aos="fade-up">
+          <div class="col-full">
+              <h3 data-num="01" class="subhead">Paid</h3>
+              <h1 class="display-1">
+              Here is the list for Cash On Delivery
+              </h1>
+              <p class="lead">
+                <div class="row">
+                    <div class="col-md-12 text-center"><h1 style="color: brown">Cash On Delivery List</h1></div>
+                    <br>
+                    <?php
+                    if($rows3>0){
+                    ?>
+                    <table class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th><center>User Name</center></th>
+                            <th><center>Product Id</center></th>
+                            <th><center>Total Price</center></th>
+                            <th><center>Mobile Number</center></th>
+                            <th>Content Control</th>
+                        </thead>
+                        <?php
+                        $count= 0;
+                        while ($rowTS = mysqli_fetch_array($result3)) {
                             $count++;
                             ?>
                             <tr>

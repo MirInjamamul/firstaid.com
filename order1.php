@@ -7,9 +7,8 @@
    $total_price = 0;
 
    if($_SERVER["REQUEST_METHOD"] == "POST") {
-      // username and password sent from form
 
-      $product_id = mysqli_real_escape_string($db,$_POST['product_id']);
+      $product_id = $_GET['id'];;
       $quantity = mysqli_real_escape_string($db,$_POST['quantity']);
 
       $sql = "SELECT * FROM product_list WHERE product_id = '$product_id'";

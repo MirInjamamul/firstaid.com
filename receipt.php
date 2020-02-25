@@ -82,7 +82,7 @@ session_start();
 								</div>
 							</fieldset>
 						</form>
-            <form action="" method="" id="create-account_form">
+            <form action="payOnDelivery.php" method="post" id="create-account_form">
 							<fieldset>
 								<h3>Cash On Delivery</h3>
 								<div class="form_content clearfix">
