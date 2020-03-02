@@ -38,28 +38,80 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+  <meta charset="utf-8">
+     <title></title>
+     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+     <!-- MODAL Link Start -->
+     <!-- Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,700' rel='stylesheet' type='text/css'>
+
+	<!-- Css -->
+	<link rel="stylesheet" href="modal/css/nivo-slider.css" type="text/css" />
+	<link rel="stylesheet" href="modal/css/owl.carousel.css">
+	<link rel="stylesheet" href="modal/css/owl.theme.css">
+	<link rel="stylesheet" href="modal/css/bootstrap.min.css">
+	<link rel="stylesheet" href="modal/css/font-awesome.min.css">
+	<link rel="stylesheet" href="modal/css/style.css">
+	<link rel="stylesheet" href="modal/css/responsive.css">
+
+	<!-- jS -->
+	<script src="modal/js/jquery.min.js" type="text/javascript"></script>
+	<script src="modal/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="modal/js/jquery.nivo.slider.js" type="text/javascript"></script>
+	<script src="modal/js/owl.carousel.min.js" type="text/javascript"></script>
+	<script src="modal/js/jquery.nicescroll.js"></script>
+	<script src="jmodal/s/jquery.scrollUp.min.js"></script>
+	<script src="modal/js/main.js" type="text/javascript"></script>
   </head>
   <body>
-      <h1 align="center">Order</h1>
-
-      <form action="" method="post">
-        <table border="0">
-          <tr>
+  <div class="container">
+    <div class="row">
+        <div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <address>
+                        <strong>FIRST AID</strong>
+                    </address>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 text-right">
+                    
+                    <p>
+                        <em>Order : </em>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="text-center">
+                    <h1>Order</h1>
+                </div>
+                </span>
+                <form action="" method="post">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
             <td>Product Id : </td>
-            <td><input type="text" name="product_id" placeholder="Product Id"></td>
+            <td><input type="text" name="product_id"></td>
           </tr>
-          <tr>
+                    </thead>
+                    <tbody>
+                    <tr>
             <td>Product Quantity :</td>
             <td><input type="number" name="quantity" min="1" max="25"></td>
           </tr>
           <tr>
             <td colspan="2"><input type="submit" value="Order"></td>
           </tr>
-        </table>
-
-      </form>
+                    </tbody>
+                  </table>
+                </form>
 
   </body>
+     
+
+	
+     
+
 </html>
